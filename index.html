@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samyuktha Anand</title>
+<meta name="description" content="Samyuktha Anand: IT graduate working across ML, research and enterprise analytics. Research intern at IIT Bombay, SAP IBP analyst at Deloitte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F3F5;
+  --gridline:rgba(15,27,45,.06);
+  --panel:#FFFFFF;
+  --rule:#D8DDE5;
+  --text:#0F1B2D;
+  --body-text:#2E3B4F;
+  --muted:#5B6B82;
+  --amber:#F2A13B;
+  --amber-ink:#9E5507;
+  --amber-soft:#FFE7C4;
+  --teal:#1F6F82;
+  --teal-soft:#D5EEF2;
+  --lilac-soft:#E6E2FA;
+  --mint-soft:#DDF3E3;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,sans-serif;
+  --r:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background-color:var(--bg);
+  background-image:linear-gradient(var(--gridline) 1px,transparent 1px),linear-gradient(90deg,var(--gridline) 1px,transparent 1px);
+  background-size:48px 48px;background-position:-1px -1px;
+  color:var(--text);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:6px}
+::selection{background:var(--amber);color:var(--text)}
+.wrap{max-width:1140px;margin:0 auto;padding-left:28px;padding-right:28px}
+
+/* nav: floating pill */
+nav{position:sticky;top:16px;z-index:10;display:flex;justify-content:center;pointer-events:none}
+nav .pill{pointer-events:auto;display:flex;align-items:center;gap:6px;padding:6px;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border:1px solid var(--rule);border-radius:999px;box-shadow:0 6px 24px -12px rgba(15,27,45,.25)}
+nav a{font-size:15px;text-decoration:none;color:var(--muted);padding:8px 14px;border-radius:999px}
+nav a:hover{color:var(--text);background:var(--bg)}
+nav a.home{font:800 16px var(--display);color:var(--text)}
+nav a.home b{color:var(--amber)}
+
+/* ---------- HERO BENTO ---------- */
+.hero{padding-top:64px}
+.bento{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:stretch;background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:44px 48px 36px}
+.tile{background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:36px}
+.intro{background:none;border:0;padding:0;display:flex;flex-direction:column;justify-content:space-between;gap:36px}
+.hello{display:inline-flex;align-items:center;gap:10px;font-size:15px;color:var(--muted)}
+.hello i{width:9px;height:9px;border-radius:50%;background:#2DB36A;box-shadow:0 0 0 4px rgba(45,179,106,.18)}
+.intro h1{font:800 clamp(56px,8vw,112px)/.9 var(--display);letter-spacing:-.04em}
+.thesis{margin-top:22px;max-width:28ch;font:600 clamp(22px,2.4vw,30px)/1.25 var(--display);letter-spacing:-.015em}
+.hl{background:linear-gradient(transparent 58%,var(--amber-soft) 58%);padding:0 2px}
+.context{margin-top:16px;max-width:54ch;color:var(--muted)}
+.context strong{color:var(--text);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font:500 15px var(--body);text-decoration:none;border:1px solid var(--rule);background:var(--panel);transition:transform .15s,border-color .15s}
+.btn:hover{border-color:var(--muted);transform:translateY(-2px)}
+.btn.primary{background:var(--text);color:#fff;border-color:var(--text)}
+
+/* quick facts */
+.facts{display:grid;grid-template-columns:1fr;gap:12px}
+.fact{border-radius:16px;padding:16px 20px;display:flex;align-items:center;gap:16px}
+.fact b{font:800 38px/1 var(--display);letter-spacing:-.02em}
+.fact span{font-size:15px;line-height:1.4;color:var(--body-text);max-width:22ch}
+.f1{background:var(--teal-soft)} .f2{background:var(--lilac-soft)}
+
+/* bit */
+.side{width:clamp(240px,24vw,290px);align-self:stretch;display:flex;flex-direction:column;justify-content:center;gap:22px}
+.bit{width:72%;margin:0 auto}
+.bit svg{display:block;width:100%;height:auto}
+.blink{animation:blink 4.5s infinite}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.08)}}
+.arm{transform-origin:150px 128px;animation:wave 2.6s ease-in-out infinite}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}70%{transform:rotate(-22deg)}80%{transform:rotate(6deg)}90%{transform:rotate(-18deg)}}
+
+
+/* ---------- SECTIONS ---------- */
+section{padding-top:112px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.head h2{font:800 clamp(38px,5vw,60px)/1 var(--display);letter-spacing:-.03em}
+.head h2 svg{display:block;margin-top:6px;width:150px;height:14px}
+.head p{color:var(--muted);max-width:38ch}
+
+/* experience cards */
+.exp{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.job{background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:30px;display:flex;flex-direction:column}
+.job.now{grid-column:span 2;display:grid;grid-template-columns:1fr 1.3fr;gap:12px 40px;border-color:var(--text);box-shadow:6px 6px 0 var(--amber)}
+.job.wide{grid-column:span 2}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.when{font-size:14px;color:var(--muted)}
+.chip-now{font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--amber);color:var(--text)}
+.role{margin-top:10px;font:600 24px/1.2 var(--display);letter-spacing:-.01em}
+.org{margin-top:2px;color:var(--teal);font-weight:500}
+.job p{margin-top:14px;color:var(--body-text)}
+.job.now p{margin-top:0}
+.num{color:var(--amber-ink);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:18px}
+.tags span{font-size:13px;padding:3px 11px;border-radius:999px;background:var(--bg);color:var(--muted)}
+.inline-link{color:var(--teal);font-weight:500;text-underline-offset:3px}
+
+/* research */
+.research{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
+.pub{background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:28px}
+.pub + .pub{margin-top:18px}
+.pub .venue{font-size:14px;color:var(--teal);font-weight:500}
+.pub h3{margin-top:8px;font:600 22px/1.3 var(--display);letter-spacing:-.01em}
+.oss{background:var(--mint-soft);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:18px}
+.oss h3{font:600 20px var(--display)}
+.oss ul{display:flex;flex-direction:column;gap:12px}
+.oss li{list-style:none;padding-left:26px;position:relative;color:var(--body-text)}
+.oss li::before{content:"✓";position:absolute;left:0;font-weight:600;color:#1E8A4C}
+
+/* projects bento */
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.proj{background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:30px;text-decoration:none;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.proj:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(15,27,45,.35)}
+.proj.big{grid-row:span 2;background:var(--text);color:#fff;border-color:var(--text)}
+.proj.big p,.proj.big .stack{color:#B8C3D3}
+.proj h3{font:600 26px/1.15 var(--display);letter-spacing:-.015em}
+.stack{margin-top:6px;font-size:14px;color:var(--teal);font-weight:500}
+.proj p{margin-top:14px;color:var(--body-text)}
+.go{margin-top:auto;padding-top:20px;font-size:14px;font-weight:600}
+.proj.big .go{color:var(--amber)}
+.metrics{display:flex;gap:32px;margin-top:28px}
+.metrics b{display:block;font:800 44px/1 var(--display);color:var(--amber);letter-spacing:-.03em}
+.metrics span{display:block;margin-top:6px;font-size:13px;color:#B8C3D3}
+.pixels{margin-top:28px;display:grid;grid-template-columns:repeat(12,1fr);gap:4px}
+.pixels i{aspect-ratio:1;border-radius:3px;transition:filter .4s}
+.pix-note{margin-top:8px;font-size:13px;color:#8796AB}
+
+/* toolkit */
+.kit{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.kit .tile{padding:28px}
+.kit h3{font:600 19px var(--display);margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-size:14px;padding:6px 13px;border-radius:999px;border:1px solid var(--rule);background:var(--bg)}
+.certs{grid-column:span 2;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cert{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:20px;text-decoration:none;transition:border-color .15s}
+.cert:hover{border-color:var(--text)}
+.cert small{display:block;font-size:13px;color:var(--muted)}
+.cert strong{display:block;margin-top:4px;font:600 17px/1.3 var(--display)}
+
+/* contact */
+.contact{margin:120px 0 48px;padding:64px 48px;background:var(--text);color:#fff;border-radius:28px;display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:end}
+.contact h2{font:800 clamp(44px,6vw,80px)/.95 var(--display);letter-spacing:-.035em}
+.contact p{margin-top:18px;color:#B8C3D3;max-width:42ch}
+.contact .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+.contact .btn{background:transparent;color:#fff;border-color:#3A4A63}
+.contact .btn:hover{border-color:#fff}
+.contact .btn.primary{background:var(--amber);color:var(--text);border-color:var(--amber)}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+
+@media (max-width:900px){
+  .bento,.research,.kit,.contact{grid-template-columns:1fr}
+  .bento{padding:28px 24px}
+  .side{width:auto}
+  .bit{width:160px}
+  .facts{grid-template-columns:1fr 1fr}
+  .exp,.proj-grid{grid-template-columns:1fr}
+  .job.now,.job.wide{grid-column:auto}
+  .job.now{grid-template-columns:1fr}
+  .proj.big{grid-row:auto}
+  .certs{grid-column:auto;grid-template-columns:1fr 1fr}
+  .contact{padding:44px 26px}
+  .contact .links{justify-content:flex-start}
+}
+@media (max-width:560px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .tile:not(.intro){padding:26px}
+  nav a{padding:8px 9px;font-size:14px}
+  nav a.hide-sm{display:none}
+  .certs{grid-template-columns:1fr}
+  .fact{flex-direction:column;align-items:flex-start;gap:8px;padding:20px}
+  .fact b{font-size:36px}
+  .hero{padding-top:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .blink,.arm{animation:none}
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="pill">
+    <a class="home" href="#top">SA<b>.</b></a>
+    <a href="#experience">Experience</a>
+    <a href="#research" class="hide-sm">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main id="top" class="wrap">
+
+  <header class="hero">
+    <div class="bento">
+      <div class="tile intro">
+        <div>
+          <h1>Samyuktha<br>Anand</h1>
+          <p class="thesis">I work on the gap between an output that's <span class="hl">technically right</span> and one a team can <span class="hl">actually act on</span>.</p>
+          <p class="context">IT graduate, former research intern at <strong>IIT Bombay</strong>, now working with SAP IBP at <strong>Deloitte</strong>. Interested in analytics and AI product management.</p>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">View resume</a>
+          <a class="btn" href="mailto:samyukthaanand16@gmail.com">Email me</a>
+          <a class="btn" href="https://www.linkedin.com/in/samyukthaaanand/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="side">
+      <div class="bit" aria-hidden="true">
+        <svg viewBox="0 0 200 190">
+          <ellipse cx="100" cy="182" rx="58" ry="7" fill="rgba(15,27,45,.12)"/>
+          <line x1="100" y1="40" x2="100" y2="18" stroke="#0F1B2D" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="100" cy="14" r="8" fill="#1F6F82"/>
+          <path d="M50 128 Q30 140 34 160" fill="none" stroke="#0F1B2D" stroke-width="7" stroke-linecap="round"/>
+          <g class="arm"><path d="M150 128 Q172 112 176 88" fill="none" stroke="#0F1B2D" stroke-width="7" stroke-linecap="round"/><circle cx="176" cy="84" r="7" fill="#0F1B2D"/></g>
+          <rect x="40" y="40" width="120" height="136" rx="54" fill="#F2A13B" stroke="#0F1B2D" stroke-width="4"/>
+          <g class="blink" style="transform-origin:100px 92px">
+            <circle cx="78" cy="92" r="15" fill="#fff" stroke="#0F1B2D" stroke-width="3"/>
+            <circle cx="122" cy="92" r="15" fill="#fff" stroke="#0F1B2D" stroke-width="3"/>
+            <circle id="pl" cx="78" cy="92" r="6.5" fill="#0F1B2D"/>
+            <circle id="pr" cx="122" cy="92" r="6.5" fill="#0F1B2D"/>
+          </g>
+          <ellipse cx="62" cy="118" rx="9" ry="5" fill="#E9707A" opacity=".55"/>
+          <ellipse cx="138" cy="118" rx="9" ry="5" fill="#E9707A" opacity=".55"/>
+          <path d="M86 118 Q100 132 114 118" fill="none" stroke="#0F1B2D" stroke-width="4" stroke-linecap="round"/>
+          <rect x="84" y="146" width="7" height="12" rx="2" fill="#0F1B2D"/>
+          <rect x="96" y="140" width="7" height="18" rx="2" fill="#0F1B2D"/>
+          <rect x="108" y="134" width="7" height="24" rx="2" fill="#1F6F82"/>
+        </svg>
+      </div>
+      <div class="facts">
+        <div class="fact f1"><b>4</b><span>roles across ML, research and SAP</span></div>
+        <div class="fact f2"><b>2</b><span>published papers, incl. IEEE Xplore</span></div>
+      </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="experience">
+    <div class="head">
+      <h2>Experience<svg viewBox="0 0 150 14" aria-hidden="true"><path d="M2 9 Q20 2 38 8 T74 8 T110 8 T148 6" fill="none" stroke="#F2A13B" stroke-width="4" stroke-linecap="round"/></svg></h2>
+      <p>Four settings, one pattern: turning raw output into something usable.</p>
+    </div>
+    <div class="exp">
+      <article class="job now">
+        <div>
+          <div class="top"><span class="when">Jul 2026 – present</span><span class="chip-now">Present</span></div>
+          <div class="role">SAP Analyst Trainee</div>
+          <div class="org">Deloitte India</div>
+          <div class="tags"><span>SAP IBP</span><span>Demand planning</span></div>
+        </div>
+        <p>Supporting a client SAP Integrated Business Planning implementation for demand planning, across functional and technical workstreams. I translate the client's planning requirements into system setups in SAP IBP, then validate that the planning outputs hold up.</p>
+      </article>
+      <article class="job">
+        <span class="when">Mar – Jun 2026</span>
+        <div class="role">Research Intern</div>
+        <div class="org">IIT Bombay</div>
+        <p>Reviewed <span class="num">20+</span> papers on dual-modal laser ultrasound and optoacoustic imaging, with weekly comparative reports contributing to ongoing biomedical imaging research.</p>
+        <p>Designed and launched web-based resources, including the LISTEN Lab website built with WordPress and Elementor, supporting the lab's digital presence and research visibility.</p>
+        <div class="tags"><span>Literature review</span><span>Biomedical imaging</span><span>WordPress / Elementor</span></div>
+      </article>
+      <article class="job">
+        <span class="when">Jan – Mar 2026</span>
+        <div class="role">Machine Learning Intern</div>
+        <div class="org">Indian Oil Corporation</div>
+        <p>Engineered a scalable anomaly detection pipeline using Isolation Forest on <span class="num">14M+</span> records, enabling high-volume monitoring and reducing false positives by <span class="num">30%</span>.</p>
+        <p>Executed feature engineering, anomaly score analysis and threshold tuning for optimized detection, validating detection consistency using silhouette scoring.</p>
+        <div class="tags"><span>Isolation Forest</span><span>scikit-learn</span><span>Feature engineering</span></div>
+      </article>
+      <article class="job wide">
+        <span class="when">Jun – Aug 2025</span>
+        <div class="role">Research Intern</div>
+        <div class="org">VJTI, Mumbai</div>
+        <p>Evaluated <span class="num">600+</span> multimodal AI outputs using BLIP captions and cosine similarity, improving factual accuracy by <span class="num">25%</span>. Built an evaluation tool with confidence scoring that flags hallucinations in under <span class="num">5s</span>.</p>
+        <div class="tags"><span>BLIP</span><span>Multimodal evaluation</span><span>Python</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="head">
+      <h2>Research<svg viewBox="0 0 150 14" aria-hidden="true"><path d="M2 9 Q20 2 38 8 T74 8 T110 8 T148 6" fill="none" stroke="#1F6F82" stroke-width="4" stroke-linecap="round"/></svg></h2>
+      <p>Published work and open source.</p>
+    </div>
+    <div class="research">
+      <div>
+        <div class="pub">
+          <div class="venue">IC3ET 2026, IEEE Xplore (Scopus-indexed)</div>
+          <h3>Multi-Objective Autoencoder for Privacy-Preserving Representation Learning</h3>
+        </div>
+        <div class="pub">
+          <div class="venue">IJIRT, Vol. 12, Issue 3, Aug 2025</div>
+          <h3>Underwater Image Super-Resolution using GANs</h3>
+        </div>
+      </div>
+      <div class="oss">
+        <h3>Open source &amp; more</h3>
+        <ul>
+          <li>Tech Contributor, GirlScript Summer of Code 2025</li>
+          <li>Hacktoberfest 2025, 6+ merged pull requests</li>
+          <li>Official copyright for the Smart Attendance Generator</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="head">
+      <h2>Projects<svg viewBox="0 0 150 14" aria-hidden="true"><path d="M2 9 Q20 2 38 8 T74 8 T110 8 T148 6" fill="none" stroke="#F2A13B" stroke-width="4" stroke-linecap="round"/></svg></h2>
+      <p>Things I've built end to end.</p>
+    </div>
+    <div class="proj-grid">
+      <a class="proj big" href="https://github.com/SamyukthaaAnand/Underwater-Image-Super-Resolution-using-GANs" target="_blank" rel="noopener">
+        <h3>Underwater image super-resolution</h3>
+        <div class="stack">PyTorch, GANs</div>
+        <p>A GAN that sharpens low-resolution underwater images and corrects their colour cast. Residual convolutional blocks in the generator keep fine textures intact.</p>
+        <div class="pixels" id="pixels" aria-hidden="true"></div>
+        <div class="pix-note">Hover to sharpen</div>
+        <div class="metrics">
+          <div><b>30+ dB</b><span>PSNR</span></div>
+          <div><b>92%</b><span>visual similarity</span></div>
+        </div>
+        <span class="go">View on GitHub</span>
+      </a>
+      <a class="proj" href="https://github.com/SamyukthaaAnand/Blinkit-Grocery-Sales-Outlet-Analysis" target="_blank" rel="noopener">
+        <h3>Blinkit sales &amp; outlet analysis</h3>
+        <div class="stack">Excel, Power BI</div>
+        <p>Cleaned 8,000+ raw grocery records and built interactive Power BI dashboards on top. Surfaced a 15% demand rise in Tier-1 cities.</p>
+        <span class="go">View on GitHub</span>
+      </a>
+      <a class="proj" href="https://github.com/SamyukthaaAnand/Attendance-Sheet-Generator" target="_blank" rel="noopener">
+        <h3>Smart Attendance Generator</h3>
+        <div class="stack">Flask, Pandas, OpenPyXL</div>
+        <p>Generates attendance sheets for any subject and batch size, cutting manual work by 70% across 500+ student records.</p>
+        <span class="go">View on GitHub</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="toolkit">
+    <div class="head">
+      <h2>Toolkit<svg viewBox="0 0 150 14" aria-hidden="true"><path d="M2 9 Q20 2 38 8 T74 8 T110 8 T148 6" fill="none" stroke="#1F6F82" stroke-width="4" stroke-linecap="round"/></svg></h2>
+      <p>What I reach for, and where I learned it.</p>
+    </div>
+    <div class="kit">
+      <div class="tile">
+        <h3>ML &amp; data</h3>
+        <div class="chips"><span>Python</span><span>SQL</span><span>PyTorch</span><span>scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Power BI</span><span>Excel</span></div>
+      </div>
+      <div class="tile">
+        <h3>Enterprise &amp; web</h3>
+        <div class="chips"><span>SAP IBP</span><span>Flask</span><span>Streamlit</span><span>WordPress</span><span>HTML</span><span>CSS</span><span>Git</span></div>
+      </div>
+      <div class="certs">
+        <a class="cert" href="https://coursera.org/share/680a4dbb778dfb86d5bcba2d65ca26b3" target="_blank" rel="noopener"><small>Duke University</small><strong>AI Product Management</strong></a>
+        <a class="cert" href="https://cs50.harvard.edu/certificates/92f02779-eca5-4f53-9b30-c4328ce14f38" target="_blank" rel="noopener"><small>Harvard</small><strong>CS50's Introduction to AI</strong></a>
+        <a class="cert" href="https://coursera.org/share/caf23a1079fa24df3a21387ff598d504" target="_blank" rel="noopener"><small>IBM</small><strong>Machine Learning</strong></a>
+        <a class="cert" href="https://www.credly.com/badges/4dea8249-7190-4d69-b402-b9db4809dfbd/public_url" target="_blank" rel="noopener"><small>AWS Academy</small><strong>Cloud Architecting</strong></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div>
+      <h2>Let's talk.</h2>
+      <p>Happy to chat about research, analytics, or anything data. LinkedIn is the fastest way to reach me.</p>
+    </div>
+    <div class="links">
+      <a class="btn primary" href="https://www.linkedin.com/in/samyukthaaanand/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="mailto:samyukthaanand16@gmail.com">Email me</a>
+      <a class="btn" href="https://github.com/SamyukthaaAnand" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+</main>
+
+
+<script>
+(function(){
+  const svg=document.querySelector('.bit svg');
+  const pl=document.getElementById('pl'), pr=document.getElementById('pr');
+  window.addEventListener('pointermove',e=>{
+    const r=svg.getBoundingClientRect(), s=200/r.width;
+    [[pl,78],[pr,122]].forEach(([p,cx])=>{
+      const ex=r.left+cx/s, ey=r.top+92/s, a=Math.atan2(e.clientY-ey,e.clientX-ex), d=Math.min(6,Math.hypot(e.clientX-ex,e.clientY-ey)/40);
+      p.setAttribute('cx',cx+Math.cos(a)*d); p.setAttribute('cy',92+Math.sin(a)*d);
+    });
+  },{passive:true});
+
+  const pix=document.getElementById('pixels');
+  const pal=['#12385A','#1F6F82','#2A9DB0','#5CC3CF','#9BE0E3','#F2A13B'];
+  const cells=[];
+  for(let k=0;k<36;k++){
+    const c=document.createElement('i'), row=k/12|0, col=k%12;
+    c.style.background=pal[Math.min(5,Math.max(0,Math.round(2.5+2*Math.sin(col/2.2+row)-row*.6)))];
+    c.style.filter='blur(3px) saturate(.5)'; c.style.transitionDelay=(col*25)+'ms';
+    pix.appendChild(c); cells.push(c);
+  }
+  const card=pix.closest('.proj');
+  card.addEventListener('mouseenter',()=>cells.forEach(c=>c.style.filter='none'));
+  card.addEventListener('mouseleave',()=>cells.forEach(c=>c.style.filter='blur(3px) saturate(.5)'));
+})();
+</script>
+</body>
+</html>
